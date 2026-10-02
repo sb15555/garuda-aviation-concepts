@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garuda Aviation Concepts</title>
+<meta name="description" content="The fictional Garuda Aviation Concepts collection — visionary aircraft concepts created for the Garuda universe.">
+<style>
+:root{
+  --bg:#06111f; --panel:#0b1b2f; --panel2:#102743; --text:#eef7ff;
+  --muted:#9fb3c8; --accent:#37a8ff; --accent2:#7dd3fc;
+  --line:rgba(255,255,255,.09); --shadow:0 20px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#12365b 0,#06111f 38%,#030914 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:rgba(3,9,20,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:22px;color:var(--muted);font-size:14px}.nav-links a:hover{color:white}
+.hero{max-width:1180px;margin:auto;padding:82px 22px 55px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;padding:7px 11px;border:1px solid rgba(55,168,255,.35);border-radius:999px;color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;background:rgba(55,168,255,.08)}
+h1{font-size:clamp(48px,7vw,88px);line-height:.92;margin:18px 0;font-weight:950;letter-spacing:-4px}
+.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:650px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-weight:800}.btn.primary{background:var(--accent);color:#03101e;border-color:transparent}.btn.secondary{background:rgba(255,255,255,.04)}
+.hero-art{min-height:390px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#0c2744,#071424);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-art:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(55,168,255,.14);filter:blur(20px);right:-100px;top:-110px}
+.skyline{position:absolute;inset:auto 0 0;height:115px;background:linear-gradient(to top,rgba(55,168,255,.12),transparent);border-top:1px solid rgba(255,255,255,.06)}
+.plane{position:absolute;left:9%;right:8%;top:38%;height:88px;background:linear-gradient(180deg,#eaf7ff,#86a6bd);border-radius:60% 48% 42% 55%;transform:skewX(-10deg) rotate(-2deg);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.plane:before{content:"";position:absolute;left:37%;top:-62px;width:34%;height:125px;background:#b7d0df;clip-path:polygon(45% 0,100% 100%,0 100%);opacity:.95}
+.plane:after{content:"";position:absolute;right:5%;top:-36px;width:13%;height:70px;background:#d8e8f1;clip-path:polygon(0 0,100% 50%,0 100%)}
+.wing{position:absolute;left:30%;top:70%;width:45%;height:26px;background:#8ca7ba;clip-path:polygon(0 50%,100% 0,84% 100%,10% 72%)}
+.engine{position:absolute;width:32px;height:18px;border-radius:50%;background:#31485a;top:72px}.e1{left:42%}.e2{left:49%}.e3{left:56%}
+.badge{position:absolute;left:25px;top:22px;font-size:12px;font-weight:900;letter-spacing:1px;color:#cfeeff}
+section{max-width:1180px;margin:auto;padding:50px 22px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}
+.section-head h2{font-size:34px;margin:0}.section-head p{color:var(--muted);max-width:600px;margin:0;line-height:1.6}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+input,select{background:#071727;border:1px solid var(--line);color:white;padding:12px 14px;border-radius:10px;outline:none}
+input{min-width:230px;flex:1}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(160deg,rgba(16,39,67,.95),rgba(8,21,36,.95));border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s transform,.25s border-color;box-shadow:0 12px 40px rgba(0,0,0,.16)}
+.card:hover{transform:translateY(-5px);border-color:rgba(55,168,255,.45)}
+.card-art{height:180px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 30%,rgba(55,168,255,.23),transparent 42%),linear-gradient(135deg,#0d2a49,#071322)}
+.card-art .mini-plane{position:absolute;left:12%;right:10%;top:46%;height:38px;background:linear-gradient(180deg,#f4fbff,#91a9ba);border-radius:50%;transform:skewX(-12deg) rotate(-4deg)}
+.card-art .mini-plane:before{content:"";position:absolute;left:38%;top:-28px;width:27%;height:58px;background:#b9d0de;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.card-art .mini-plane:after{content:"";position:absolute;left:28%;top:25px;width:47%;height:12px;background:#8299aa;clip-path:polygon(0 50%,100% 0,87% 100%,10% 70%)}
+.card-content{padding:20px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent2);font-weight:900}
+.card h3{font-size:24px;margin:8px 0}.card p{color:var(--muted);line-height:1.55;margin:0 0 15px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.spec{padding:10px;border-radius:10px;background:rgba(255,255,255,.035)}.spec small{display:block;color:#7f95aa;font-size:10px;text-transform:uppercase}.spec strong{font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.about-box{padding:28px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025)}.about-box h3{margin-top:0}.about-box p{color:var(--muted);line-height:1.7}
+footer{border-top:1px solid var(--line);padding:28px 22px;color:#71879d;text-align:center;font-size:13px}
+.notice{margin-top:12px;color:#71879d;font-size:12px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}}
+@media(max-width:560px){.nav-links{display:none}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero{padding-top:55px}.hero-art{min-height:300px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo">GARUDA <span>AVIATION</span></div>
+    <div class="nav-links">
+      <a href="#concepts">Concepts</a><a href="#family">E-Turbo Family</a><a href="#about">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">Fictional aerospace universe</div>
+    <h1>Garuda Aviation<br><span style="color:var(--accent)">Concepts.</span></h1>
+    <p>A digital showroom for the aircraft concepts created in the Garuda universe — from giant passenger aircraft and cargo giants to electric regional aircraft and supersonic travel.</p>
+    <div class="cta"><a class="btn primary" href="#concepts">Explore Concepts</a><a class="btn secondary" href="#family">View E-Turbo Family</a></div>
+    <div class="notice">All aircraft shown here are fictional concepts.</div>
+  </div>
+  <div class="hero-art" aria-label="Stylized Garuda aircraft concept illustration">
+    <div class="badge">GARUDA CONCEPT FLEET • 01—08</div>
+    <div class="plane"><div class="wing"></div><div class="engine e1"></div><div class="engine e2"></div><div class="engine e3"></div></div>
+    <div class="skyline"></div>
+  </div>
+</header>
+
+<section id="concepts">
+  <div class="section-head">
+    <div><h2>Concept Fleet</h2><p>Only Garuda Aviation concepts are included. Airbus-branded concepts are intentionally excluded.</p></div>
+  </div>
+  <div class="controls">
+    <input id="search" placeholder="Search concepts…" aria-label="Search concepts">
+    <select id="type" aria-label="Filter by type">
+      <option value="all">All types</option><option value="passenger">Passenger</option><option value="cargo">Cargo</option><option value="electric">Electric</option><option value="supersonic">Supersonic</option><option value="special">Special concept</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="family">
+  <div class="section-head">
+    <div><h2>E-Turbo Family</h2><p>A growing family of fictional electric turboprop aircraft, from the compact S to the long-range XL.</p></div>
+  </div>
+  <div class="grid" id="familyGrid"></div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="about-box"><h3>About the universe</h3><p>Garuda Aviation is a fictional aircraft manufacturer created for this concept universe. The fleet combines imaginative passenger, cargo, electric and high-speed aircraft ideas.</p></div>
+    <div class="about-box"><h3>Design language</h3><p>Clean blue-and-white branding, dramatic proportions, large cabins, ambitious ranges and future-focused technology define the Garuda concept family.</p></div>
+  </div>
+</section>
+
+<footer>GARUDA AVIATION CONCEPTS · Fictional concept website · No Airbus concepts included</footer>
+
+<script>
+const concepts = [
+ {name:"Garuda A-14",type:"passenger",tag:"Flagship · Giant passenger aircraft",desc:"A giant triple-decker, six-engine passenger concept built around extreme capacity and long-distance comfort.",specs:[["Configuration","Triple-decker"],["Engines","6"],["Role","Long-haul"],["Theme","Flagship"]]},
+ {name:"Garuda Super Hotel",type:"special",tag:"Hospitality · Hotel aircraft",desc:"A flying hotel concept with multiple decks, guest rooms, dining spaces, a presidential suite and a rooftop-style lounge.",specs:[["Guests","Up to 500"],["Main decks","3"],["Role","Luxury travel"],["Theme","Fly · Stay · Experience"]]},
+ {name:"Garuda Super Bulb",type:"cargo",tag:"Cargo · Heavy transport",desc:"An oversized bulb-shaped cargo aircraft concept designed around an enormous internal cargo volume.",specs:[["Cargo volume","~2,500 m³"],["Payload","~600 t"],["Range","~12,000 km"],["Role","Heavy cargo"]]},
+ {name:"Garuda Supersonic",type:"supersonic",tag:"High-speed · Passenger",desc:"A fictional high-speed passenger aircraft concept designed for rapid intercontinental travel.",specs:[["Cruise concept","Mach 2.2"],["Passengers","~250"],["Range","~15,000 km"],["Role","Supersonic travel"]]},
+ {name:"Garuda X-Eagle",type:"special",tag:"Advanced aerospace · Stealth concept",desc:"A fictional high-speed aerospace concept focused on low-observable shaping, advanced aerodynamics and extreme performance.",specs:[["Cruise concept","Mach 3.2"],["Ceiling","~60,000 ft"],["Range","~12,000 km"],["Theme","Advanced aerospace"]]},
+];
+
+const eturbo = [
+ {name:"Garuda E-Turbo S",tag:"Electric turboprop · Compact",desc:"The compact starting point of the E-Turbo family, designed for regional passenger service.",specs:[["Range","~2,000 km"],["Speed","~480 km/h"],["Passengers","~50"],["Propulsion","All-electric"]]},
+ {name:"Garuda E-Turbo M",tag:"Electric turboprop · Stretched",desc:"A stretched E-Turbo with more cabin space and a longer mission range.",specs:[["Range","~3,500 km"],["Speed","~450 km/h"],["Passengers","~90"],["Propulsion","All-electric"]]},
+ {name:"Garuda E-Turbo L",tag:"Electric turboprop · Wide-body regional",desc:"A larger and wider E-Turbo designed to push electric regional travel farther.",specs:[["Range","~5,500 km"],["Speed","~500 km/h"],["Passengers","~110"],["Propulsion","Next-gen electric"]]},
+ {name:"Garuda E-Turbo XL",tag:"Electric turboprop · Largest variant",desc:"The largest E-Turbo variant, with three cabin classes and the longest range in the family.",specs:[["Range","~7,000+ km"],["Speed","~500 km/h"],["Passengers","~150"],["Cabin","3-class"]]}
+];
+
+function card(item){
+ return `<article class="card" data-type="${item.type||'electric'}" data-name="${item.name.toLowerCase()}">
+   <div class="card-art"><div class="mini-plane"></div></div>
+   <div class="card-content"><div class="tag">${item.tag}</div><h3>${item.name}</h3><p>${item.desc}</p>
+   <div class="specs">${item.specs.map(s=>`<div class="spec"><small>${s[0]}</small><strong>${s[1]}</strong></div>`).join("")}</div></div>
+ </article>`;
+}
+document.getElementById("grid").innerHTML=concepts.map(card).join("");
+document.getElementById("familyGrid").innerHTML=eturbo.map(x=>card({...x,type:"electric"})).join("");
+
+const search=document.getElementById("search"), type=document.getElementById("type");
+function filter(){
+ const q=search.value.toLowerCase(), t=type.value;
+ document.querySelectorAll("#grid .card").forEach(c=>{
+   c.style.display=(c.dataset.name.includes(q) && (t==="all"||c.dataset.type===t))?"":"none";
+ });
+}
+search.addEventListener("input",filter); type.addEventListener("change",filter);
+</script>
+</body>
+</html>
